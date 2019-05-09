@@ -112,8 +112,6 @@ services:
     depends_on:
       - zookeeper-1
       - broker-1
-      - broker-2
-      - broker-3
     ports:
       - "29000:9000"
     environment:
