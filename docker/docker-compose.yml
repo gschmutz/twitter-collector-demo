@@ -82,7 +82,7 @@ services:
       - $PWD/kafka-connect:/etc/kafka-connect/custom-plugins
     restart: always
 
- schema-registry-ui:
+  schema-registry-ui:
     image: landoop/schema-registry-ui
     container_name: schema-registry-ui
     depends_on:
