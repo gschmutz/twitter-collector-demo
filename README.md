@@ -31,9 +31,9 @@ export DOCKER_HOST_IP=$(ip addr show eth0 | grep "inet\b" | awk '{print $2}' | c
 
 # Get the project
 cd /home/ubuntu 
-git clone https://github.com/gschmutz/various-demos/nosql-workshop.git
-chown -R ubuntu:ubuntu nosql-workshop
-cd nosql-workshop/01-environment/docker
+git clone https://github.com/gschmutz/twitter-collector-demo.git
+chown -R ubuntu:ubuntu twitter-collector-demo
+cd twitter-collector-demo/docker
 
 # Setup Kafka Connect Twitter Connector
 mkdir kafka-connect
@@ -41,10 +41,11 @@ cd kafka-connect
 wget https://github.com/jcustenborder/kafka-connect-twitter/releases/download/0.2.26/kafka-connect-twitter-0.2.26.tar.gz
 mkdir kafka-connect-twitter-0.2.26
 tar -zxvf kafka-connect-twitter-0.2.26.tar.gz -C kafka-connect-twitter-0.2.26
-rm kafka-connect-jms-1.2.1-2.1.0-all.tar.gz
+rm kafka-connect-twitter-0.2.26.tar.gz
+cd ..
 
 # Startup Environment
-docker-compose up
+sudo -E docker-compose up -d
 ```
 
 
