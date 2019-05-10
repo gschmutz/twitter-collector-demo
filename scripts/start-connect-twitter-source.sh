@@ -17,7 +17,7 @@ curl -X "POST" "$DOCKER_HOST_IP:8083/connectors" \
   	"twitter.oauth.accessToken": "XXXXX",
   	"twitter.oauth.accessTokenSecret": "XXXXX",
   	"process.deletes": "false",
-  	"filter.keywords": "Keanu Reeves,Bruce Willis,Quentin Tarantino,Sandra Bullock",
+  	"filter.keywords": "Keanu Reeves,Bruce Willis,Quentin Tarantino,Sandra Bullock,John Travolta,Samuel L Jackson",
   	"kafka.status.topic": "tweet-raw-v1",
   	"tasks.max": "1"
 	}
